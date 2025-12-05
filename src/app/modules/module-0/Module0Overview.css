@@ -1,0 +1,144 @@
+.module-0 {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.module-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #61dafb;
+}
+
+.module-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #666;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+}
+
+.topic-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.topic-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.topic-header {
+  width: 100%;
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.topic-header:hover {
+  background: #e9ecef;
+}
+
+.topic-icon {
+  font-size: 1.5rem;
+}
+
+.topic-title {
+  flex: 1;
+}
+
+.topic-arrow {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.topic-content {
+  padding: 1.5rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.content-section {
+  margin-bottom: 1.5rem;
+}
+
+.content-section:last-child {
+  margin-bottom: 0;
+}
+
+.content-section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.content-section p {
+  line-height: 1.6;
+  color: #555;
+}
+
+.content-section ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.content-section li {
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+@media (prefers-color-scheme: dark) {
+  .module-description {
+    color: #aaa;
+  }
+
+  .topic-card {
+    background: #2d2d2d;
+    border-color: #444;
+  }
+
+  .topic-header {
+    background: #1e1e1e;
+  }
+
+  .topic-header:hover {
+    background: #2a2a2a;
+  }
+
+  .content-section h3 {
+    color: #fff;
+  }
+
+  .content-section p,
+  .content-section li {
+    color: #ccc;
+  }
+}
+
