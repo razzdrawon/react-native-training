@@ -1,15 +1,15 @@
 # React vs React Native
 
-## Similitudes
+## Similarities
 
-- Misma sintaxis JSX
-- Mismos principios (components, props, state)
-- Mismos hooks
-- Mismo ecosistema de herramientas (TypeScript, testing, etc.)
+- Same JSX syntax
+- Same principles (components, props, state)
+- Same hooks
+- Same tool ecosystem (TypeScript, testing, etc.)
 
-## Diferencias Clave
+## Key Differences
 
-### Componentes
+### Components
 
 **React (Web):**
 ```tsx
@@ -29,48 +29,47 @@
 </View>
 ```
 
-### Estilos
+### Styling
 
 **React (Web):**
 ```tsx
 <div style={{ color: 'red', fontSize: 16 }}>Hello</div>
-// O con CSS
+// Or with CSS
 <div className="my-class">Hello</div>
 ```
 
 **React Native:**
 ```tsx
 <Text style={{ color: 'red', fontSize: 16 }}>Hello</Text>
-// O con StyleSheet
+// Or with StyleSheet
 const styles = StyleSheet.create({
   text: { color: 'red', fontSize: 16 }
 });
 <Text style={styles.text}>Hello</Text>
 ```
 
-### Navegación
+### Navigation
 
 **React (Web):**
 - React Router
-- URLs y navegación del navegador
+- URLs and browser navigation
 
 **React Native:**
 - React Navigation
 - Expo Router (file-based)
 - Stack, Tabs, Drawer navigators
 
-### APIs Nativas
+### Native APIs
 
 **React Native:**
-- Acceso a cámara, geolocalización, notificaciones push
-- Native modules para funcionalidad específica de plataforma
+- Access to camera, geolocation, push notifications
+- Native modules for platform-specific functionality
 
 ## Expo
 
-Expo simplifica el desarrollo React Native:
-- No necesitas configurar Xcode/Android Studio
-- Hot reload automático
-- Expo Router para navegación
-- EAS Build para builds en la nube
-- Expo Updates para OTA updates
-
+Expo simplifies React Native development:
+- You don't need to configure Xcode/Android Studio
+- Automatic hot reload
+- Expo Router for navigation
+- EAS Build for cloud builds
+- Expo Updates for OTA updates

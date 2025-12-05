@@ -1,14 +1,14 @@
-# React Hooks - Guía Completa
+# React Hooks - Complete Guide
 
-## ¿Qué son los Hooks?
+## What are Hooks?
 
-Los Hooks son funciones especiales que te permiten "engancharte" a características de React desde componentes funcionales. Fueron introducidos en React 16.8.
+Hooks are special functions that let you "hook into" React features from function components. They were introduced in React 16.8.
 
-## Hooks Básicos
+## Basic Hooks
 
 ### useState
 
-Maneja el estado local de un componente.
+Manages the local state of a component.
 
 ```tsx
 import { useState } from 'react';
@@ -27,7 +27,7 @@ function Counter() {
 
 ### useEffect
 
-Maneja efectos secundarios (side effects) como llamadas a APIs, suscripciones, etc.
+Handles side effects such as API calls, subscriptions, etc.
 
 ```tsx
 import { useEffect, useState } from 'react';
@@ -39,7 +39,7 @@ function UserProfile({ userId }) {
     fetch(`/api/users/${userId}`)
       .then(res => res.json())
       .then(setUser);
-  }, [userId]); // Se ejecuta cuando userId cambia
+  }, [userId]); // Runs when userId changes
 
   return <div>{user?.name}</div>;
 }
@@ -47,7 +47,7 @@ function UserProfile({ userId }) {
 
 ### useContext
 
-Accede al contexto sin prop drilling.
+Accesses context without prop drilling.
 
 ```tsx
 import { createContext, useContext } from 'react';
@@ -60,11 +60,11 @@ function ThemedButton() {
 }
 ```
 
-## Hooks de Optimización
+## Optimization Hooks
 
 ### useMemo
 
-Memoiza valores costosos.
+Memoizes expensive values.
 
 ```tsx
 import { useMemo } from 'react';
@@ -80,7 +80,7 @@ function ExpensiveComponent({ items }) {
 
 ### useCallback
 
-Memoiza funciones para evitar recrearlas.
+Memoizes functions to avoid recreating them.
 
 ```tsx
 import { useCallback } from 'react';
@@ -96,7 +96,7 @@ function Parent({ items }) {
 
 ## Custom Hooks
 
-Puedes crear tus propios hooks para reutilizar lógica.
+You can create your own hooks to reuse logic.
 
 ```tsx
 function useCounter(initialValue = 0) {
@@ -109,15 +109,14 @@ function useCounter(initialValue = 0) {
   return { count, increment, decrement, reset };
 }
 
-// Uso
+// Usage
 function MyComponent() {
   const { count, increment } = useCounter(10);
   return <button onClick={increment}>{count}</button>;
 }
 ```
 
-## Reglas de los Hooks
+## Rules of Hooks
 
-1. Solo llama Hooks en el nivel superior (no dentro de loops, condiciones, o funciones anidadas)
-2. Solo llama Hooks desde componentes funcionales o custom hooks
-
+1. Only call Hooks at the top level (not inside loops, conditions, or nested functions)
+2. Only call Hooks from function components or custom hooks

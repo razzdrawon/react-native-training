@@ -16,6 +16,7 @@ interface Topic {
     features?: string[];
     highlights?: string[];
     future?: string;
+    tools?: string;
   };
 }
 
@@ -25,15 +26,15 @@ export default function Module0Overview() {
       title: 'React Fundamentals',
       icon: '⚛️',
       content: {
-        what: 'React es una biblioteca de JavaScript para construir interfaces de usuario. Se basa en componentes reutilizables, JSX para la sintaxis, y un sistema de props y state para manejar datos.',
-        why: 'React simplifica la creación de interfaces complejas mediante componentes, permite actualizaciones eficientes del DOM virtual, y tiene un ecosistema maduro con muchas herramientas y bibliotecas.',
+        what: 'React is a JavaScript library for building user interfaces. It is based on reusable components, JSX for syntax, and a props and state system for managing data.',
+        why: 'React simplifies the creation of complex interfaces through components, enables efficient virtual DOM updates, and has a mature ecosystem with many tools and libraries.',
         advantages: [
-          'Componentes reutilizables y modulares',
-          'Virtual DOM para actualizaciones eficientes',
-          'Ecosistema grande y comunidad activa',
-          'Unidirectional data flow (flujo de datos unidireccional)',
-          'Fácil de aprender y usar',
-          'Excelente para aplicaciones SPA (Single Page Applications)',
+          'Reusable and modular components',
+          'Virtual DOM for efficient updates',
+          'Large ecosystem and active community',
+          'Unidirectional data flow',
+          'Easy to learn and use',
+          'Excellent for SPA (Single Page Applications)',
         ],
       },
     },
@@ -41,159 +42,159 @@ export default function Module0Overview() {
       title: 'Hooks',
       icon: '🪝',
       content: {
-        what: 'Los Hooks son funciones que te permiten "engancharte" a características de React desde componentes funcionales. Introducidos en React 16.8, permiten usar state y otras características sin escribir clases.',
-        why: 'Los componentes de clase eran verbosos y difíciles de reutilizar. Los Hooks permiten compartir lógica entre componentes de manera más simple y directa.',
+        what: 'Hooks are functions that let you "hook into" React features from function components. Introduced in React 16.8, they allow you to use state and other features without writing classes.',
+        why: 'Class components were verbose and difficult to reuse. Hooks allow sharing logic between components in a simpler and more direct way.',
         advantages: [
-          'useState: Manejo de estado local',
-          'useEffect: Efectos secundarios y lifecycle',
-          'useContext: Acceso a context sin prop drilling',
-          'useMemo: Memoización de valores costosos',
-          'useCallback: Memoización de funciones',
-          'Custom Hooks: Reutilización de lógica entre componentes',
+          'useState: Local state management',
+          'useEffect: Side effects and lifecycle',
+          'useContext: Context access without prop drilling',
+          'useMemo: Memoization of expensive values',
+          'useCallback: Memoization of functions',
+          'Custom Hooks: Logic reuse between components',
         ],
         modern:
-          'Los Hooks son la forma moderna de escribir componentes React. Permiten composición, reutilización de lógica, y código más limpio y mantenible.',
+          'Hooks are the modern way to write React components. They enable composition, logic reuse, and cleaner, more maintainable code.',
       },
     },
     {
       title: 'React vs React Native',
       icon: '📱',
       content: {
-        what: 'React es para web, React Native es para mobile. Comparten los mismos principios y sintaxis, pero React Native renderiza componentes nativos en lugar de HTML.',
-        why: 'Permite escribir código una vez y ejecutarlo en múltiples plataformas (iOS y Android), manteniendo la experiencia nativa.',
+        what: 'React is for web, React Native is for mobile. They share the same principles and syntax, but React Native renders native components instead of HTML.',
+        why: 'It allows writing code once and running it on multiple platforms (iOS and Android), maintaining a native experience.',
         advantages: [
-          'Mismo conocimiento de React aplicable a ambas',
-          'Componentes nativos para mejor performance',
-          'Hot reload para desarrollo rápido',
-          'Acceso a APIs nativas del dispositivo',
-          'Comunidad y ecosistema compartidos',
+          'Same React knowledge applicable to both',
+          'Native components for better performance',
+          'Hot reload for fast development',
+          'Access to native device APIs',
+          'Shared community and ecosystem',
         ],
         comparison:
-          'React usa div, span, etc. React Native usa View, Text, etc. React Native no tiene CSS tradicional, usa StyleSheet. La navegación también difiere: React Router vs React Navigation/Expo Router.',
+          'React uses div, span, etc. React Native uses View, Text, etc. React Native does not have traditional CSS, it uses StyleSheet. Navigation also differs: React Router vs React Navigation/Expo Router.',
       },
     },
     {
       title: 'State Management',
       icon: '🗄️',
       content: {
-        what: 'La gestión de estado determina cómo compartes y manejas datos entre componentes en tu aplicación.',
-        why: 'A medida que las aplicaciones crecen, compartir estado entre componentes se vuelve complejo. Necesitas estrategias para manejar estado global y local eficientemente.',
+        what: 'State management determines how you share and handle data between components in your application.',
+        why: 'As applications grow, sharing state between components becomes complex. You need strategies to handle global and local state efficiently.',
         strategies: [
-          'Context API: Para estado global simple',
-          'Zustand: State management ligero y moderno',
-          'Redux: Para aplicaciones complejas con mucho estado',
-          'React Query: Para estado del servidor y caché',
-          'Local State: useState para estado local del componente',
-          'State Colocation: Mantener estado cerca de donde se usa',
+          'Context API: For simple global state',
+          'Zustand: Lightweight and modern state management',
+          'Redux: For complex applications with lots of state',
+          'React Query: For server state and caching',
+          'Local State: useState for component local state',
+          'State Colocation: Keep state close to where it is used',
         ],
         modern:
-          'La tendencia moderna es usar múltiples herramientas: Context API o Zustand para estado global pequeño, React Query para datos del servidor, y useState para estado local.',
+          'The modern trend is to use multiple tools: Context API or Zustand for small global state, React Query for server data, and useState for local state.',
       },
     },
     {
       title: 'Performance',
       icon: '⚡',
       content: {
-        what: 'Optimizar React para que las aplicaciones sean rápidas y responsivas, especialmente con grandes cantidades de datos o componentes.',
-        why: 'Aplicaciones lentas dan mala experiencia de usuario. React ofrece varias herramientas para optimizar renders y mejorar performance.',
+        what: 'Optimizing React so applications are fast and responsive, especially with large amounts of data or components.',
+        why: 'Slow applications provide a poor user experience. React offers several tools to optimize renders and improve performance.',
         strategies: [
-          'React.memo: Evita re-renders innecesarios',
-          'useMemo: Memoiza valores costosos',
-          'useCallback: Memoiza funciones para evitar recrearlas',
-          'Code Splitting: Cargar código solo cuando se necesita',
-          'Virtual Scrolling: Renderizar solo items visibles',
-          'Lazy Loading: Cargar componentes y rutas bajo demanda',
+          'React.memo: Prevents unnecessary re-renders',
+          'useMemo: Memoizes expensive values',
+          'useCallback: Memoizes functions to avoid recreating them',
+          'Code Splitting: Load code only when needed',
+          'Virtual Scrolling: Render only visible items',
+          'Lazy Loading: Load components and routes on demand',
         ],
         modern:
-          'React 18+ tiene mejoras automáticas de performance. Con React.memo, useMemo, y useCallback usados correctamente, puedes optimizar significativamente tu aplicación.',
+          'React 18+ has automatic performance improvements. With React.memo, useMemo, and useCallback used correctly, you can significantly optimize your application.',
       },
     },
     {
       title: 'Routing',
       icon: '🗺️',
       content: {
-        what: 'Sistema de navegación que permite cambiar entre diferentes "páginas" o vistas en una aplicación de una sola página (SPA).',
-        why: 'Las aplicaciones modernas necesitan navegación sin recargar la página completa, mantener historial, y manejar URLs.',
+        what: 'Navigation system that allows switching between different "pages" or views in a single-page application (SPA).',
+        why: 'Modern applications need navigation without reloading the entire page, maintaining history, and handling URLs.',
         features: [
-          'React Router: Routing para aplicaciones web',
-          'Expo Router: File-based routing para React Native',
-          'Nested Routes: Rutas anidadas y layouts',
-          'Route Guards: Protección de rutas',
-          'Lazy Loading: Cargar rutas bajo demanda',
-          'Deep Linking: Navegación desde URLs externas',
+          'React Router: Routing for web applications',
+          'Expo Router: File-based routing for React Native',
+          'Nested Routes: Nested routes and layouts',
+          'Route Guards: Route protection',
+          'Lazy Loading: Load routes on demand',
+          'Deep Linking: Navigation from external URLs',
         ],
         modern:
-          'Expo Router trae file-based routing (como Next.js) a React Native, simplificando la navegación. React Router sigue siendo el estándar para web.',
+          'Expo Router brings file-based routing (like Next.js) to React Native, simplifying navigation. React Router remains the standard for web.',
       },
     },
     {
       title: 'Testing',
       icon: '🧪',
       content: {
-        what: 'Estrategias y herramientas para probar aplicaciones React y asegurar que funcionen correctamente.',
-        why: 'Testing reduce bugs, facilita refactoring seguro, y asegura que nuevas características no rompan código existente.',
+        what: 'Strategies and tools for testing React applications to ensure they work correctly.',
+        why: 'Testing reduces bugs, facilitates safe refactoring, and ensures new features do not break existing code.',
         strategies: [
-          'Unit Testing: Probar funciones y hooks aislados',
-          'Component Testing: Probar componentes con React Testing Library',
-          'Integration Testing: Probar interacción entre componentes',
-          'E2E Testing: Probar flujos completos de usuario',
-          'Mocking: Simular dependencias externas',
+          'Unit Testing: Test isolated functions and hooks',
+          'Component Testing: Test components with React Testing Library',
+          'Integration Testing: Test interaction between components',
+          'E2E Testing: Test complete user flows',
+          'Mocking: Simulate external dependencies',
         ],
         tools:
-          'Jest para unit testing, React Testing Library para component testing, Vitest para tests rápidos, y Detox/Appium para E2E en React Native.',
+          'Jest for unit testing, React Testing Library for component testing, Vitest for fast tests, and Detox/Appium for E2E in React Native.',
       },
     },
     {
       title: 'React Native',
       icon: '📱',
       content: {
-        what: 'Framework para construir aplicaciones móviles nativas usando React. Permite escribir código una vez y ejecutarlo en iOS y Android.',
-        why: 'Desarrollar apps nativas requiere Swift/Kotlin. React Native permite usar JavaScript/TypeScript y React para crear apps móviles.',
+        what: 'Framework for building native mobile applications using React. Allows writing code once and running it on iOS and Android.',
+        why: 'Developing native apps requires Swift/Kotlin. React Native allows using JavaScript/TypeScript and React to create mobile apps.',
         features: [
-          'Expo: Herramientas y servicios para desarrollo rápido',
-          'Native Components: Componentes que renderizan UI nativa',
-          'Navigation: React Navigation o Expo Router',
-          'APIs Nativas: Acceso a cámara, geolocalización, etc.',
-          'Hot Reload: Ver cambios instantáneamente',
-          'Code Push: Actualizar apps sin pasar por stores',
+          'Expo: Tools and services for rapid development',
+          'Native Components: Components that render native UI',
+          'Navigation: React Navigation or Expo Router',
+          'Native APIs: Access to camera, geolocation, etc.',
+          'Hot Reload: See changes instantly',
+          'Code Push: Update apps without going through stores',
         ],
         modern:
-          'Expo ha simplificado mucho el desarrollo React Native. Con Expo Router, el desarrollo es más similar a Next.js, haciendo la transición más fácil.',
+          'Expo has greatly simplified React Native development. With Expo Router, development is more similar to Next.js, making the transition easier.',
       },
     },
     {
       title: 'Advanced Features',
       icon: '🚀',
       content: {
-        what: 'Características avanzadas como SSR, PWA, Micro-frontends, y optimizaciones para producción.',
-        why: 'Aplicaciones modernas necesitan estas características para mejor SEO, performance offline, y arquitecturas distribuidas.',
+        what: 'Advanced features such as SSR, PWA, Micro-frontends, and production optimizations.',
+        why: 'Modern applications need these features for better SEO, offline performance, and distributed architectures.',
         features: [
-          'SSR (Server-Side Rendering): Next.js para mejor SEO',
-          'PWA (Progressive Web Apps): Apps que funcionan offline',
-          'Micro-frontends: Dividir aplicación en partes independientes',
-          'Code Splitting: Dividir bundle en chunks más pequeños',
-          'Bundle Analysis: Analizar y optimizar tamaño del bundle',
+          'SSR (Server-Side Rendering): Next.js for better SEO',
+          'PWA (Progressive Web Apps): Apps that work offline',
+          'Micro-frontends: Divide application into independent parts',
+          'Code Splitting: Divide bundle into smaller chunks',
+          'Bundle Analysis: Analyze and optimize bundle size',
         ],
         modern:
-          'Next.js es el framework líder para SSR con React. Para React Native, Expo EAS Build y Updates permiten deployment y actualizaciones OTA.',
+          'Next.js is the leading framework for SSR with React. For React Native, Expo EAS Build and Updates enable deployment and OTA updates.',
       },
     },
     {
       title: 'React 19 & React Native',
       icon: '✨',
       content: {
-        what: 'Las últimas versiones de React y React Native con mejoras y nuevas características.',
-        why: 'React continúa evolucionando para ser más simple, performante, y moderno.',
+        what: 'The latest versions of React and React Native with improvements and new features.',
+        why: 'React continues to evolve to be simpler, more performant, and modern.',
         highlights: [
-          'React 19: Mejoras en concurrent features',
-          'Mejor soporte para Server Components',
-          'Optimizaciones automáticas de performance',
-          'Mejor developer experience',
-          'React Native: Mejor integración con nuevas APIs',
-          'Expo SDK: Actualizaciones regulares y nuevas features',
+          'React 19: Improvements in concurrent features',
+          'Better support for Server Components',
+          'Automatic performance optimizations',
+          'Better developer experience',
+          'React Native: Better integration with new APIs',
+          'Expo SDK: Regular updates and new features',
         ],
         future:
-          'React se está moviendo hacia un modelo más simple y performante. Server Components, mejor concurrent rendering, y mejor integración entre web y mobile son el futuro.',
+          'React is moving towards a simpler and more performant model. Server Components, better concurrent rendering, and better integration between web and mobile are the future.',
       },
     },
   ];
@@ -206,10 +207,10 @@ export default function Module0Overview() {
 
   return (
     <div className="module-0">
-      <h1 className="module-title">Módulo 0: Recapitulación Conceptual</h1>
+      <h1 className="module-title">Module 0: Conceptual Recap</h1>
       <p className="module-description">
-        Este módulo cubre los conceptos fundamentales de React y React Native.
-        Haz clic en cada tema para expandir y ver más detalles.
+        This module covers the fundamental concepts of React and React Native.
+        Click on each topic to expand and see more details.
       </p>
 
       <div className="topics-grid">
@@ -228,16 +229,16 @@ export default function Module0Overview() {
             {selectedTopicIndex === index && (
               <div className="topic-content">
                 <div className="content-section">
-                  <h3>¿Qué es?</h3>
+                  <h3>What is it?</h3>
                   <p>{topic.content.what}</p>
                 </div>
                 <div className="content-section">
-                  <h3>¿Por qué?</h3>
+                  <h3>Why?</h3>
                   <p>{topic.content.why}</p>
                 </div>
                 {topic.content.advantages && (
                   <div className="content-section">
-                    <h3>Ventajas/Características:</h3>
+                    <h3>Advantages/Features:</h3>
                     <ul>
                       {topic.content.advantages.map((adv, i) => (
                         <li key={i}>{adv}</li>
@@ -247,7 +248,7 @@ export default function Module0Overview() {
                 )}
                 {topic.content.strategies && (
                   <div className="content-section">
-                    <h3>Estrategias:</h3>
+                    <h3>Strategies:</h3>
                     <ul>
                       {topic.content.strategies.map((strategy, i) => (
                         <li key={i}>{strategy}</li>
@@ -257,7 +258,7 @@ export default function Module0Overview() {
                 )}
                 {topic.content.patterns && (
                   <div className="content-section">
-                    <h3>Patrones:</h3>
+                    <h3>Patterns:</h3>
                     <ul>
                       {topic.content.patterns.map((pattern, i) => (
                         <li key={i}>{pattern}</li>
@@ -287,26 +288,32 @@ export default function Module0Overview() {
                 )}
                 {topic.content.vsRxjs && (
                   <div className="content-section">
-                    <h3>Comparación:</h3>
+                    <h3>Comparison:</h3>
                     <p>{topic.content.vsRxjs}</p>
                   </div>
                 )}
                 {topic.content.comparison && (
                   <div className="content-section">
-                    <h3>Comparación:</h3>
+                    <h3>Comparison:</h3>
                     <p>{topic.content.comparison}</p>
                   </div>
                 )}
                 {topic.content.modern && (
                   <div className="content-section">
-                    <h3>Enfoque Moderno:</h3>
+                    <h3>Modern Approach:</h3>
                     <p>{topic.content.modern}</p>
                   </div>
                 )}
                 {topic.content.future && (
                   <div className="content-section">
-                    <h3>Futuro:</h3>
+                    <h3>Future:</h3>
                     <p>{topic.content.future}</p>
+                  </div>
+                )}
+                {topic.content.tools && (
+                  <div className="content-section">
+                    <h3>Tools:</h3>
+                    <p>{topic.content.tools}</p>
                   </div>
                 )}
               </div>
@@ -317,4 +324,3 @@ export default function Module0Overview() {
     </div>
   );
 }
-

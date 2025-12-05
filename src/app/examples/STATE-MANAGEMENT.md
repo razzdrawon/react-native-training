@@ -1,10 +1,10 @@
-# State Management en React
+# State Management in React
 
-## Opciones de State Management
+## State Management Options
 
 ### 1. Local State (useState)
 
-Para estado que solo un componente necesita.
+For state that only one component needs.
 
 ```tsx
 function Counter() {
@@ -15,7 +15,7 @@ function Counter() {
 
 ### 2. Context API
 
-Para estado que varios componentes necesitan, pero no es global.
+For state that multiple components need, but is not global.
 
 ```tsx
 const ThemeContext = createContext();
@@ -32,7 +32,7 @@ function ThemeProvider({ children }) {
 
 ### 3. Zustand
 
-State management ligero y moderno.
+Lightweight and modern state management.
 
 ```tsx
 import { create } from 'zustand';
@@ -50,7 +50,7 @@ function Counter() {
 
 ### 4. React Query
 
-Para estado del servidor y caché.
+For server state and caching.
 
 ```tsx
 import { useQuery } from '@tanstack/react-query';
@@ -66,11 +66,10 @@ function Users() {
 }
 ```
 
-## Cuándo usar cada uno
+## When to use each
 
-- **useState**: Estado local del componente
-- **Context API**: Estado compartido entre pocos componentes
-- **Zustand**: Estado global simple a mediano
-- **Redux**: Estado global complejo (mucho estado, middleware necesario)
-- **React Query**: Todo lo relacionado con datos del servidor
-
+- **useState**: Component local state
+- **Context API**: State shared between few components
+- **Zustand**: Simple to medium global state
+- **Redux**: Complex global state (lots of state, middleware needed)
+- **React Query**: Everything related to server data
