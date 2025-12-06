@@ -1,0 +1,39 @@
+.card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  padding: 1rem 1.5rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f8f9fa;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .card {
+    background: #2d2d2d;
+    border-color: #444;
+  }
+
+  .card-title {
+    background: #1e1e1e;
+    border-color: #444;
+    color: #fff;
+  }
+}
+

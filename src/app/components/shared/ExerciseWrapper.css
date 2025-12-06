@@ -1,0 +1,38 @@
+.exercise-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exercise-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.exercise-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #61dafb;
+}
+
+.exercise-description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.exercise-content {
+  padding: 1rem 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .exercise-header {
+    border-bottom-color: #444;
+  }
+
+  .exercise-description {
+    color: #aaa;
+  }
+}
+

@@ -1,0 +1,76 @@
+.topic-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.topic-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.topic-header {
+  width: 100%;
+  padding: 1.25rem;
+  background: #f8f9fa;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.topic-header:hover {
+  background: #e9ecef;
+}
+
+.topic-icon {
+  font-size: 1.5rem;
+}
+
+.topic-title {
+  flex: 1;
+}
+
+.topic-arrow {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.topic-content {
+  padding: 1.5rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .topic-card {
+    background: #2d2d2d;
+    border-color: #444;
+  }
+
+  .topic-header {
+    background: #1e1e1e;
+  }
+
+  .topic-header:hover {
+    background: #2a2a2a;
+  }
+}
+

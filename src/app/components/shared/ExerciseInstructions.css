@@ -1,0 +1,84 @@
+.exercise-instructions {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #61dafb;
+}
+
+.instructions-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #213547;
+}
+
+.instructions-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.instructions-section {
+  margin-bottom: 1.5rem;
+}
+
+.instructions-section:last-child {
+  margin-bottom: 0;
+}
+
+.instructions-section-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.instructions-list {
+  padding-left: 1.5rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+.instructions-list-ordered {
+  list-style-type: decimal;
+}
+
+.instructions-list li {
+  margin-bottom: 0.5rem;
+}
+
+.instructions-content {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .exercise-instructions {
+    background: #2d2d2d;
+    border-left-color: #61dafb;
+  }
+
+  .instructions-title {
+    color: #fff;
+  }
+
+  .instructions-description {
+    color: #ccc;
+  }
+
+  .instructions-section-title {
+    color: #fff;
+  }
+
+  .instructions-list {
+    color: #ccc;
+  }
+
+  .instructions-content {
+    border-top-color: #444;
+  }
+}
+
